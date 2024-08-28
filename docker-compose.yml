@@ -1,0 +1,11 @@
+version: "3"
+services:
+  porn-vault:
+    image: faptain/porn-vault:alpha
+    container_name: porn-vault
+    volumes:
+      - /mnt/data/pv:/config
+#      - /media/files:/media/files
+    ports:
+      - 3000:3000
+    restart: unless-stopped
